@@ -1,0 +1,51 @@
+<!--pages/MyInfo/MyInfo.wxml-->
+
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" bindtap="swichNav">有效订单</view>
+  <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" bindtap="swichNav">失效订单</view>
+</view>
+
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:calc({{winHeight}}px - 46px);" bindchange="bindChange">
+  <!-- 有效订单 -->
+  <swiper-item>
+    <scroll-view style='height:99.5%;' scroll-y="true" scroll-top="0">
+      <view style='margin: 5px;'>
+
+        <view class='dingdan-box' bindtap='GetChuChang' data-item='{{item}}' data-index='{{index}}' wx:for="{{NewOrderList}}" wx:key="{{index}}">
+          <view class='box-shang box-bian'>
+            <view>
+              <view class='box-cuzi'>{{scinfo.MDName}}</view>
+              <view class='box-color'>{{item.DD_SDate}}</view>
+            </view>
+            <view class='box-cuzi'>出场码</view>
+          </view>
+          <view class='box-shang' wx:for="{{item.goods}}" wx:for-item="goods" wx:key="{{item.goods.DP_XuHao}}">
+            <view>{{goods.DP_Name}}</view>
+            <view class='box-color'>
+              x{{goods.DP_Num}}
+            </view>
+          </view>
+          
+          <view style='text-align: right;'>共 {{item.SumNum}} 件商品，合计：¥{{item.DD_JinE}}</view>
+        </view>
+
+      </view>
+      <view style='color: #CCC;'>已经到底了</view>
+
+    </scroll-view>
+  </swiper-item>
+
+  <!-- 失效订单 -->
+  <swiper-item>
+
+    <scroll-view style='height:99.99%;' scroll-y="true" scroll-top="0">
+
+      <view style='margin: 5px;'>
+
+      </view>
+      <view style='color: #CCC;'>已经到底了</view>
+
+    </scroll-view>
+
+  </swiper-item>
+</swiper>

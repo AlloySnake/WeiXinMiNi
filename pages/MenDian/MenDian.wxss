@@ -1,0 +1,70 @@
+/* pages/MenDian/MenDian.wxss */
+@import "../../resource/css/fonticon.wxss";
+page {
+  background: #eee;
+  height: 100%;
+  font-size: 12px;
+  
+  
+  }
+
+.sousuo {
+  margin: 7px;
+  display: flex;
+  border-radius: 15px;
+  height: 30px;
+  background: #fff;
+  line-height: 30px;
+}
+.zuijin
+{
+    margin-left: 10px;
+  margin-bottom: 5px;
+
+}
+.zuijin_box
+{
+  background: #fff;
+    display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  padding-top: 22rpx;
+
+}
+.fujinmd
+{
+  margin-left: 10px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+  
+}
+.fujinmd_box
+{
+  background: #fff;
+    display: flex;
+  flex-wrap: wrap;
+
+  padding-top: 22rpx;
+
+}
+.fujinmd_conent
+{
+  padding: 5px 20px;
+   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content:space-between;
+  line-height: 27px;
+  background: #fff;
+  border-bottom: 1rpx solid #eee;
+  
+  
+}
+.new_city_text{
+  width: 220rpx;
+  text-align: center;
+  line-height: 70rpx;
+  background: rgb(241, 241, 241);
+  border-radius: 10rpx;
+  margin:0 0 22rpx 22rpx;
+}

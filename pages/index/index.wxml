@@ -1,0 +1,43 @@
+<!--pages/index/index.wxml-->
+
+<view>
+  <view class='head'>
+    <view class='head-left'>
+    <view class='userinfo-avatar1'><open-data type="userAvatarUrl" ></open-data></view>
+      
+    </view>
+    <view class='head-content'>
+      <view class='left' >
+        <view><open-data type="userNickName"></open-data></view>
+        <view style='font-size: 14px;font-weight:bold;'>
+        <text >{{mdinfo.MDName}}</text>
+        
+        <text class="iconfont OTO-icon-icon" style='color:#ff6a00;font-size: 16px;margin-left:3px;'></text>
+        </view>
+      </view>
+      <view class='right' bindtap='login'>
+      <view><text>更换店铺</text><text class="iconfont OTO-icon-icon-arrow-right2" style='font-size: 12px;margin-left:3px;'></text></view>
+      </view>
+
+    </view>
+
+  </view>
+  <view class='content' style='height: calc({{phSystemInfo.windowHeight}}px - 80px);' >
+<view  class='zhong'>
+<view >
+<view><button class="userinfo-Scan" bindtap='Scan' style="background-image: url(http://img.dsnet.cc/WXXCX/img/01-220.png)"/></view>
+<view style='text-align:center;margin-top:10px;'>
+<text>扫不到商品？</text><text>试一试 </text> <text style='color:#ff7300;font-weight:bold;' bindtap='Scan'>手动输入</text>
+<!--<button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber">dsfs</button>--> 
+</view>
+</view>
+
+</view>
+  </view>
+
+  <view class='bottom'>
+  <view>感谢您的支持，本次可购买10件商品</view>
+  </view>
+
+
+</view>

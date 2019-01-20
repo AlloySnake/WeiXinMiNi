@@ -1,0 +1,43 @@
+<!--pages/MenDian/MenDian.wxml-->
+<wxs module="filters" src="../../resource/js/funlab.wxs"></wxs>
+<view class='sousuo'>
+  <text class="iconfont OTO-icon-soushuo" style='font-size: 14px;margin-left:10px;'></text>
+  <input style='font-size: 12px;margin-left:10px;height: 30px;width: 95%' bindinput="bindKeyInput" placeholder="搜索门店" />
+</view>
+<view>
+  <view class='zuijin'>
+    <text style='font-size: 12px;font-weight: bold;'>最近光顾的商超门店  </text>
+  </view>
+  <view class='zuijin_box'>
+    <view class='new_city_text'  bindtap='xuanMD' wx:for="{{ZuiXinMd}}" wx:key="{{item}}" data-index='{{index}}' data-item='{{item}}'>{{item.MDName}}</view>
+    <!--
+    <view class='new_city_text'>云返玉门店</view>
+    <view class='new_city_text'>云返酒泉店</view>
+    <view class='new_city_text'>附近无可选门店</view>
+    <view class='new_city_text'>附近无可选门店</view>
+    <view class='new_city_text'>附近无可选门店</view>
+    -->
+  </view>
+</view>
+<view>
+  <view class='fujinmd'>
+    <text style='font-size: 12px;font-weight: bold;'>附近门店  </text>
+    <text style='font-size: 10px;color: rgb(223, 0, 0);'>附近开通扫码购服务的门店信息 </text>
+  </view>
+  <view class='fujin_box'>
+    <view>
+    <block wx:for="{{fujinMd}}" wx:key="{{item}}">
+      <view class='fujinmd_conent' bindtap='xuanMD' data-item='{{item}}'>
+        <view>
+          <view style='font-size: 12px;font-weight: bold;'>{{item.MDName}}</view>
+          <view style='font-size: 10px;color: #AAA;'>{{item.DiZhi}} </view>
+        </view>
+        <view style='font-size: 10px;color: #AAA;bottom: 0;'>{{filters.toFix(item.juli)+ ' ' +item.dw}}</view>
+      </view>
+      </block>
+
+
+    </view>
+  </view>
+  <view style='font-size: 12px;color: #CCC;line-height: 35px;text-align: center;'>-------- 我是有底线的 --------</view>
+</view>

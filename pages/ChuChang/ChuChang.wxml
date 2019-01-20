@@ -1,0 +1,15 @@
+<!--pages/ChuChang/ChuChang.wxml-->
+<view  style='padding: 0 10px;'>
+  <view style='height:30px;'></view>
+  <view  class='content' >
+    <view calss='zhong'>
+       <canvas style="width: 200px; height: 200px;" canvas-id="myQrcode"></canvas>
+    </view>
+
+  </view>
+  <view style='height:30px;border-bottom: 1rpx rgb(223, 223, 223) solid;'></view>
+  <view>说明：</view>
+  <view>1.请在出场收银台处展示二维码。</view>
+  <view>2.扫描成功后，点击收银台处“出场并打印小票”。</view>  
+  <view>3.恭喜您，完成整体购买流程，欢迎下次光临。</view>  
+</view>

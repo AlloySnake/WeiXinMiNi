@@ -1,0 +1,55 @@
+<!--pages/ScanGo/ScanGo.wxml-->
+<wxs module="filters" src="../../resource/js/funlab.wxs"></wxs>
+<import src="../../resource/template/template.wxml" />
+<view>
+  <view class='top'>
+    <view>{{scinfo.MDName}}</view>
+    <view>
+      <text>我的订单</text>
+      <text class="iconfont OTO-icon-icon-arrow-right2" style='font-size: 12px;margin-left:3px;'></text>
+    </view>
+  </view>
+
+  <view class='gouwudai'>
+  
+    <view class='box' bindtap='add'  wx:for="{{gdList}}" wx:key="{{index}}" data-item='{{item}}'>
+      <view>{{item.title}}</view>
+      <view style='color: #888;font-size: 10px;'>{{item.price}}</view>
+      <!--
+      <view class='fudong'>
+        <text class="iconfont OTO-icon-icon1 z"></text>
+      </view>
+      -->
+    </view>
+   
+  </view>
+
+  <view class='gouwulan' style='height:calc({{phInfo.windowHeight}}px - 144px);'>
+    <scroll-view class='gd' scroll-y="true"  scroll-top="{{top}}">
+      <!--<checkbox-group bindchange="checkboxChange">-->
+        <block wx:for="{{goodsList}}" wx:key="{{item}}">
+          <template is="SMGood" data="{{item,index}}"></template>
+        </block>
+      <!--</checkbox-group>-->
+    </scroll-view>
+  </view>
+
+  <view class='jiesuan'>
+    <view class='box'>
+      <view style='font-size: 18px;color: #ff6600;margin-left: 10px;'>¥ {{filters.toFix(heji.sum)}}</view>
+      
+      <view class='right' style='width: 170px;height: 50px;'>
+      <view bindtap='qingkong' style='width: 80px;height: 50px;background: #f6f6f6;'>清空</view>
+      <view bindtap='jiesuan' style='width: 90px;height: 50px;background: #ff6600;color: #FFF;'>结算( {{heji.num}})</view>
+      </view>
+    </view>
+  </view>
+
+</view>
+<view class='saoma' bindtap='Scan'>
+<view style='margin-top: -13px;'><text class="iconfont OTO-icon-iconSaoMa" ></text></view>
+<view class='zii'>继续扫</view>
+</view>
+<view class='shuru'><text class="iconfont OTO-icon-bianjiqianbixieshuru" style='font-size: 20px;'></text></view>
+<!--
+<view class='qingkong'>清空</view>-->
