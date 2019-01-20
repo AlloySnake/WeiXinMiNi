@@ -1,0 +1,124 @@
+.good{
+  position: relative;
+  min-height: 120rpx;
+  border-bottom: 2rpx solid #f7f7f7;
+  padding: 10rpx;
+  margin: 10rpx;
+  font-size: 12px;
+}
+.good .image{
+  position: absolute;
+  top: 60rpx;
+  left: 20rpx;
+
+}
+.good .content{
+  margin-left: 90rpx;
+}
+.good .content > text{
+  display: block;
+  color: #666;
+
+}
+.good .content .title{
+  display: block;
+  font-size: 12px;
+  font-weight: bold;
+  color: #333;
+}
+.good .content .price{
+
+  font-size: 20rpx;
+
+}
+.number
+{
+  color: #888 !important;
+  font-weight:normal !important;
+  font-size: 10px;
+}
+.good .content .btn{
+margin:10rpx 0 10rpx 0;
+display: flex;
+flex-direction: row;
+width:100px;
+border: 1px solid rgba(0, 0, 0, 0.1);
+border-radius: 7rpx;
+}
+.good .content .btn .jia{
+flex:1;
+text-align: center;
+font-size: 36rpx;
+}
+.good .content .btn .int{
+flex:1;
+border-left: 1px solid rgba(0, 0, 0, 0.1);
+border-right: 1px solid rgba(0, 0, 0, 0.1);
+padding-top: 7rpx;
+text-align: center;
+}
+.good .content .btn .jian{
+flex:1;
+text-align: center;
+font-size: 32rpx;
+}
+.good .right{
+  position: absolute;
+  top: 0rpx;
+  right: 20rpx;
+  font-size: 24rpx;
+}
+.good .right .del{
+
+color: rgb(212, 212, 212);
+}
+.good .right .zjin{
+font-size: 30rpx;
+margin: 15px;
+font-weight: bold;
+color: rgb(230, 73, 0);
+}
+.good .right .is-send{
+  position: absolute;
+  top: 0;
+  right: 10rpx;
+  display: block;
+  width: 100rpx;
+  text-align: center;
+  border-radius: 5rpx;
+  background: #0089dc;
+  color: #fff;
+  font-size: 20rpx;
+}
+.good .right .distance{
+  position: absolute;
+  top: 40rpx;
+  right: -20rpx;
+  width: 200rpx;
+}
+/*  重写 checkbox 样式  */
+/* 未选中的 背景样式 */
+checkbox .wx-checkbox-input{
+   border-radius: 50%;/* 圆角 */
+   width: 45rpx; /* 背景的宽 */
+   height: 45rpx; /* 背景的高 */
+}
+/* 选中后的 背景样式 （红色背景 无边框 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked{
+   border: none;
+   background:#ff6a00;
+}
+/* 选中后的 对勾样式 （白色对勾 可根据UI需求自己修改） */
+checkbox .wx-checkbox-input.wx-checkbox-input-checked::before{
+   border-radius: 50%;/* 圆角 */
+   width: 45rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   height: 45rpx;/* 选中后对勾大小，不要超过背景的尺寸 */
+   line-height: 45rpx;
+   text-align: center;
+   font-size:30rpx; /* 对勾大小 30rpx */
+   color:#fff; /* 对勾颜色 白色 */
+   background: transparent;
+   transform:translate(-50%, -50%) scale(1);
+   -webkit-transform:translate(-50%, -50%) scale(1);
+}
+

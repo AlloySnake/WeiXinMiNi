@@ -1,0 +1,33 @@
+<!--扫码商品列表-->
+<wxs module="filters" src="../js/funlab.wxs"></wxs>
+<template name="SMGood">
+<view class='good' >
+<!--
+    <icon class='image' wx:if="{{item.selected}}" type="success" color='#ff6a00' size="23"/>
+  <icon class='image' wx:else type="circle" size="23"/>
+
+
+    <checkbox class='image' value='{{item.spcode}}' checked='{{item.selected}}'></checkbox>
+   -->
+   <icon class='image' type="success" color='#ff6a00' size="15"/>
+    <view class='content'>
+      <text class='title'>{{item.title}}</text>
+      <text class='number' space="ensp">单价:￥{{filters.toFix(item.price)}}  规格:{{item.number + '*' + item.tmxs + item.danwei}}  月销:{{item.xiaoshou30}}</text>
+      
+      <view class='btn'>
+      <!-- 减号 -->
+<text class="iconfont {{item.number==1?'OTO-icon-shanchu4':'OTO-icon-jian1'}} jian"  data-index="{{index}}" bindtap="bindMinus"></text>
+<!-- 数值 -->
+<text bindchange="bindManual" class="int" >{{item.number}}</text>
+<!-- 加号 -->
+<text class="iconfont OTO-icon-jia jia" data-index="{{index}}" bindtap="bindPlus"></text>
+      </view>
+    </view>
+    <view class='right'>
+    <!--
+    <view class='del' style='text-align: center;' bindtap='shanchu' data-index='{{index}}'><icon class='iconfont OTO-icon-delete'/></view>-->
+    <view class='zjin' >￥{{filters.toFix(item.price * item.number)}}</view>
+      
+    </view>
+</view>
+</template>

@@ -1,0 +1,36 @@
+{
+	"setting": {
+		"urlCheck": true,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true
+	},
+	"appid": "wx8a9fe50daf460cad",
+	"projectname": "%E5%B7%A7%E6%89%8B%E6%89%AB%E7%A0%81%E8%B4%AD",
+	"libVersion": "2.5.0",
+	"compileType": "miniprogram",
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"list": []
+		},
+		"miniprogram": {
+			"current": 0,
+			"list": [
+				
+			]
+		}
+	}
+}

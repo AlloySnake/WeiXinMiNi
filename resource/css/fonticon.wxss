@@ -1,0 +1,28 @@
+@font-face {
+  font-family: 'iconfont';  /* project id 474139 */
+  src: url('//at.alicdn.com/t/font_474139_xnt4do3m5sk.eot');
+  src: url('//at.alicdn.com/t/font_474139_xnt4do3m5sk.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_474139_xnt4do3m5sk.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_474139_xnt4do3m5sk.svg#iconfont') format('svg');
+}
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:32px;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+.OTO-icon-icon:before { content: "\e61d"; }
+.OTO-icon-icon:before { content: "\e621"; }
+.OTO-icon-delete:before { content: "\e623"; }
+.OTO-icon-icon-arrow-right2:before { content: "\e668"; }
+.OTO-icon-icon1:before { content: "\e65b"; }
+
+.OTO-icon-shanchu4:before { content: "\e662"; }
+.OTO-icon-jia:before { content: "\e666"; }
+.OTO-icon-jian1:before { content: "\e661"; }
+.OTO-icon-bianjiqianbixieshuru:before { content: "\e7c8"; }
+.OTO-icon-iconSaoMa:before { content: "\e61d"; }
+.OTO-icon-soushuo:before { content: "\e62d"; }
